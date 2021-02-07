@@ -13,11 +13,21 @@
     border: 1px solid red;
 }
 .moj-red {
-    height: 300px;
+    height: 200px;
+    border: 1px solid red;
+}
+@media only screen and (max-width: 1200px) {
+    .moj-red {
+        height: 300px;
+        border: 1px solid red;
+    }
 }
 #lokacija {
     color: whitesmoke;
 }
 #temperatura {
     color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
