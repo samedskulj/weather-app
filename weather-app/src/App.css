@@ -1,9 +1,17 @@
-.container-fluid {
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 50%;
-    background-color: whitesmoke;
+    background-image: url("./slike/Planina-background.jpg");
+    background-size: 1000px;
+    background-repeat: no-repeat;
     box-shadow: 1px 1px 5px 3px #ccc;
+}
+.moja-kolona {
+    border: 1px solid red;
+}
+.moj-red {
+    height: 300px;
 }
