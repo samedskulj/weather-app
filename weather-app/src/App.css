@@ -15,3 +15,9 @@
 .moj-red {
     height: 300px;
 }
+#lokacija {
+    color: whitesmoke;
+}
+#temperatura {
+    margin-top: 20px;
+}
