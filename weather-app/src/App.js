@@ -17,6 +17,7 @@ function App() {
     .then(response => response.json())
     .then(data => {
       setVrijeme(data)
+      setImeGrada("");
       console.log(data);
     });
 
@@ -28,14 +29,17 @@ function App() {
    <Container>
      <Row className = "justify-content-between align-items-center moj-red">
        <Col className = "col-3 moja-kolona align-self-center">
+       {(typeof vrijeme.main != "undefined") ? (
          <div>
-           <p>{vrijeme.main.humidity}</p>
+           <p id = "temperatura">{vrijeme.main.humidity}</p>
            <p id = "temperatura">{vrijeme.main.temp}</p>
          </div>
+          ): ("")}
        </Col>
+      
        <Col className = "col-6 moja-kolona">
        <Form>
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="formBasic">
     <Form.Label id = "lokacija">Lokacija</Form.Label>
     <Form.Control type="text" placeholder="Npr. London..." onChange = {e => setImeGrada(e.target.value)} />
     <Form.Text className="text-muted">
