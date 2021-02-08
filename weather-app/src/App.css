@@ -11,42 +11,31 @@
 }
 
 .moj-red {
-    height: 200px;
+    height: 300px;
    
 }
-@media only screen and (max-width: 1200px) {
-    .moj-red {
-        height: 300px;
-      
-    }
-}
 
-@media only screen and (max-width: 860px) {
-    .container {
-        width: 500px;
-    }
-} 
+
+
 #lokacija {
     color: whitesmoke;
-    text-shadow: 1px 2px 5px 3px black;
+    
 }
-#temperatura {
-    color: whitesmoke;
+
+#temperatura2 {
+    font-size: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 #dugme1 {
     box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
 }
 #informacije {
-    box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
-    transition: all 0.2s ease-in-out;
-    margin-left: 50px;
-    background-color: cornflowerblue;
+    display: flex;
+    margin-left: 20px;
+
+    background-color: transparent;
     text-align: center;
-}
-#informacije:hover {
-    transform: scale(1.3)
+    transition: 0.5s ease-out;
 }

@@ -3,7 +3,7 @@ import React, {useState} from "react"
 import './App.css';
 import {Button, Container, Form, FormControl, Row, Col} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import cloudy from "./slike/cloudy.png";
 
 function App() {
 
@@ -19,7 +19,6 @@ function App() {
       setVrijeme(data)
       setImeGrada("");
       console.log(data);
-  
     });
   }
 
@@ -27,25 +26,26 @@ function App() {
     <>
    <Container className = "">
      <Row className = "justify-content-between align-items-center moj-red">
-       <Col className = "col-lg-3 col-md-3 col-sm-5 col-xs-3 moja-kolona align-self-center">
+       <Col className = "col-lg-3 col-md-3 col-sm-5 col-xs-1 moja-kolona align-self-center">
        {(typeof vrijeme.main != "undefined") ? (
          <div id = "informacije">
-           <p id = "temperatura">Vlaga iznosi: {vrijeme.main.humidity}%</p>
-           <p id = "temperatura">Temperatura je: {Math.floor((vrijeme.main.temp - 32) * 5 / 9)}°C</p>
+           <p id = "temperatura2">{Math.floor((vrijeme.main.temp - 273.19))}°C</p>
+           <p id = "imegrada1" className = "align-self-center ml-2 mt-2">{vrijeme.name}</p>
+           <img src = {cloudy} className = "align-self-center mr-1 ml-2 mb-2" height = "30px"></img>
          </div>
           ): ("")}
        </Col>
-       <Col className = "col-lg-6 col-md-6 col-sm-6 col-xs-6  moja-kolona">
-       <Form>
+       <Col className = "col-lg-6 col-md-6 col-sm-6 col-xs-2 moja-kolona">
+      <Form id = "forma1">
      <Form.Group controlId="formBasic">
     <Form.Label id = "lokacija">Lokacija</Form.Label>
-    <Form.Control type="text" placeholder="Npr. London..." onChange = {e => setImeGrada(e.target.value)} />
+    <Form.Control type="text" placeholder="Npr. London..." value = {imeGrada} onChange = {e => setImeGrada(e.target.value)} />
     <Form.Text className="text-muted">
       Molimo Vas upišite ime lokacije!
     </Form.Text>
   </Form.Group>
   </Form>
-  <Button id = "dugme1" variant="outline-info" onClick = {fetchVremena}>Pritisnite</Button>
+  <Button id = "dugme1" variant="info" className = "mb-4" onClick = {fetchVremena}>Pritisnite</Button>
   </Col>
      </Row>
    </Container>
