@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap');
+
+.mojaPoruka {
+    font-family: merriweather, serif;
+    font-style: italic;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+}

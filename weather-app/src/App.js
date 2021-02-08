@@ -38,7 +38,11 @@ function App() {
     })
   };
   return (
-    <>
+    <> 
+    
+    <div className= "test">
+    <Poruka></Poruka>
+    </div>
    <Container className = "">
      <Row className = "justify-content-between align-items-center moj-red">
        <Col className = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 moja-kolona align-self-center">
