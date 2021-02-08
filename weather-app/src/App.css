@@ -4,30 +4,49 @@
     left: 50%;
     transform: translate(-50%, -50%);
     height: 50%;
-    background-image: url("./slike/Planina-background.jpg");
-    background-size: 1000px;
+    background-image: url("./slike/Plavkasta.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 5px 3px #ccc;
 }
-.moja-kolona {
-    border: 1px solid red;
-}
+
 .moj-red {
     height: 200px;
-    border: 1px solid red;
+   
 }
 @media only screen and (max-width: 1200px) {
     .moj-red {
         height: 300px;
-        border: 1px solid red;
+      
     }
 }
+
+@media only screen and (max-width: 860px) {
+    .container {
+        width: 500px;
+    }
+} 
 #lokacija {
     color: whitesmoke;
+    text-shadow: 1px 2px 5px 3px black;
 }
 #temperatura {
     color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+#dugme1 {
+    box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
+}
+#informacije {
+    box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
+    transition: all 0.2s ease-in-out;
+    margin-left: 50px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+#informacije:hover {
+    transform: scale(1.3)
 }

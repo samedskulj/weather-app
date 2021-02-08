@@ -19,24 +19,23 @@ function App() {
       setVrijeme(data)
       setImeGrada("");
       console.log(data);
-    });
-
-  }
   
+    });
+  }
 
   return (
     <>
    <Container className = "">
      <Row className = "justify-content-between align-items-center moj-red">
-       <Col className = "col-3 moja-kolona align-self-center">
+       <Col className = "col-lg-3 col-md-3 col-sm-5 col-xs-3 moja-kolona align-self-center">
        {(typeof vrijeme.main != "undefined") ? (
-         <div>
-           <p id = "temperatura">Vlaga iznosi: {vrijeme.main.humidity}</p>
-           <p id = "temperatura">Temperatura je: {vrijeme.main.temp}</p>
+         <div id = "informacije">
+           <p id = "temperatura">Vlaga iznosi: {vrijeme.main.humidity}%</p>
+           <p id = "temperatura">Temperatura je: {Math.floor((vrijeme.main.temp - 32) * 5 / 9)}°C</p>
          </div>
           ): ("")}
        </Col>
-       <Col className = "col-6 moja-kolona">
+       <Col className = "col-lg-6 col-md-6 col-sm-6 col-xs-6  moja-kolona">
        <Form>
      <Form.Group controlId="formBasic">
     <Form.Label id = "lokacija">Lokacija</Form.Label>
@@ -46,7 +45,7 @@ function App() {
     </Form.Text>
   </Form.Group>
   </Form>
-  <Button onClick = {fetchVremena}>Pritisnite</Button>
+  <Button id = "dugme1" variant="outline-info" onClick = {fetchVremena}>Pritisnite</Button>
   </Col>
      </Row>
    </Container>
