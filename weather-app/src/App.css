@@ -40,8 +40,6 @@
 #dugme1 {
     box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
     font-family: 'Titillium Web', sans-serif;
-    display: flex;
-    justify-content: center;
 }
 #informacije {
     display: flex;
@@ -51,7 +49,6 @@
     justify-content: center;
     transition: 0.5s ease-out;
 }
-
 #forma1 {
     font-family: 'Titillium Web', sans-serif;
 }

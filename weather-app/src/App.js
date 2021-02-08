@@ -3,25 +3,40 @@ import React, {useState} from "react"
 import './App.css';
 import {Button, Container, Form, FormControl, Row, Col} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import cloudy from "./slike/cloudy.png";
+import {MDBInput, MDBBtn, MDBIcon} from "mdbreact";
+import Poruka from "./components/Poruka";
 
 function App() {
 
-
+  let mojBody = document.querySelector("#temperatura2");
   const[imeGrada, setImeGrada] = useState("");
   const[vrijeme, setVrijeme] = useState({});
 
 
   function fetchVremena() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${imeGrada}&APPID=07b663c40260196298d7045ac1f80f5c`)
-    .then(response => response.json())
+    .then(response => {
+      if(response.ok) {
+        return response.json()
+      } else {
+        return Promise.reject({
+          status: response.status,
+          statusText: response.statusText,
+        })
+      }
+    })
     .then(data => {
       setVrijeme(data)
       setImeGrada("");
       console.log(data);
-    });
-  }
-
+    }).catch(error => {
+      if(error.status === 400) {
+        alert(error.statusText +": " +  "Niste ništa ukucali ili ste upisali pogrešan grad, pokušajte ponovo")
+      }
+    })
+  };
   return (
     <>
    <Container className = "">
@@ -36,16 +51,8 @@ function App() {
           ): ("")}
        </Col>
        <Col className = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 moja-kolona1">
-      <Form id = "forma1">
-     <Form.Group controlId="formBasic">
-    <Form.Label id = "lokacija">Lokacija</Form.Label>
-    <Form.Control type="text" placeholder="Npr. London..." value = {imeGrada} onChange = {e => setImeGrada(e.target.value)} />
-    <Form.Text className="text-muted">
-      Molimo Vas upišite ime lokacije!
-    </Form.Text>
-  </Form.Group>
-  </Form>
-  <Button id = "dugme1" variant="info" className = "mb-4" onClick = {fetchVremena}>Pritisnite</Button>
+        <MDBInput label = "Npr London..." value = {imeGrada} onChange = {e => setImeGrada(e.target.value)} />
+        <MDBBtn id = "dugme1" icon = "sun "rounded color="blue" className = "mb-5" onClick = {fetchVremena}>Izaberite</MDBBtn>
   </Col>
      </Row>
    </Container>
