@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap');
+
 .container {
     position: absolute;
     top: 50%;
@@ -16,13 +18,20 @@
 }
 
 
-
+#imegrada1{
+    font-family: merriweather, serif;
+    font-weight: 400;
+    font-style: normal;
+}
 #lokacija {
-    color: whitesmoke;
+    color: rgb(24, 24, 24);
     
 }
 
 #temperatura2 {
+    font-family: merriweather, serif;
+    font-weight: 700;
+    font-style: italic;
     font-size: 5rem;
     display: flex;
     align-items: center;
@@ -30,12 +39,19 @@
 }
 #dugme1 {
     box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 #informacije {
     display: flex;
     margin-left: 20px;
-
     background-color: transparent;
     text-align: center;
+    justify-content: center;
     transition: 0.5s ease-out;
+}
+
+#forma1 {
+    font-family: 'Titillium Web', sans-serif;
 }

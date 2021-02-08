@@ -26,16 +26,16 @@ function App() {
     <>
    <Container className = "">
      <Row className = "justify-content-between align-items-center moj-red">
-       <Col className = "col-lg-3 col-md-3 col-sm-5 col-xs-1 moja-kolona align-self-center">
+       <Col className = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 moja-kolona align-self-center">
        {(typeof vrijeme.main != "undefined") ? (
          <div id = "informacije">
-           <p id = "temperatura2">{Math.floor((vrijeme.main.temp - 273.19))}°C</p>
+           <p id = "temperatura2">{Math.floor((vrijeme.main.temp - 273.19))}°c</p>
            <p id = "imegrada1" className = "align-self-center ml-2 mt-2">{vrijeme.name}</p>
            <img src = {cloudy} className = "align-self-center mr-1 ml-2 mb-2" height = "30px"></img>
          </div>
           ): ("")}
        </Col>
-       <Col className = "col-lg-6 col-md-6 col-sm-6 col-xs-2 moja-kolona">
+       <Col className = "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 moja-kolona1">
       <Form id = "forma1">
      <Form.Group controlId="formBasic">
     <Form.Label id = "lokacija">Lokacija</Form.Label>
