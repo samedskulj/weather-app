@@ -1,54 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap");
+.body {
+  background-color: aquamarine;
+}
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 50%;
-    background-image: url("./slike/Plavkasta.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 1px 1px 5px 3px #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  background-image: url("./slike/Plavkasta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px 3px #ccc;
 }
 
 .moj-red {
-    height: 300px;
-   
+  height: 300px;
 }
 
-
-#imegrada1{
-    font-family: merriweather, serif;
-    font-weight: 400;
-    font-style: normal;
+#imegrada1 {
+  font-family: merriweather, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 #lokacija {
-    color: rgb(24, 24, 24);
-    
+  color: rgb(24, 24, 24);
 }
 
 #temperatura2 {
-    font-family: merriweather, serif;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: merriweather, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #dugme1 {
-    box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
-    font-family: 'Titillium Web', sans-serif;
+  box-shadow: 1px 1px 5px 1px rgb(31, 31, 31);
+  font-family: "Titillium Web", sans-serif;
 }
 #informacije {
-    display: flex;
-    margin-left: 20px;
-    background-color: transparent;
-    text-align: center;
-    justify-content: center;
-    transition: 0.5s ease-out;
+  display: flex;
+  margin-left: 20px;
+  background-color: transparent;
+  text-align: center;
+  justify-content: center;
+  transition: 0.5s ease-out;
 }
 #forma1 {
-    font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.errorText {
+  margin-bottom: -20px;
+  margin-top: -20px;
+  text-align: center;
 }
