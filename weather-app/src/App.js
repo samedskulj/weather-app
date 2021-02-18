@@ -14,6 +14,7 @@ import "mdbreact/dist/css/mdb.css";
 import cloudy from "./slike/cloudy.png";
 import { MDBInput, MDBBtn, MDBIcon } from "mdbreact";
 import Poruka from "./components/Poruka";
+import sifraAPI from "./zastita/api_key";
 
 function App() {
   let mojBody = document.querySelector("#temperatura2");
@@ -26,7 +27,7 @@ function App() {
       setError("Molimo Vas upisite grad!!");
     } else {
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${imeGrada}&APPID=07b663c40260196298d7045ac1f80f5c`
+        `http://api.openweathermap.org/data/2.5/weather?q=${imeGrada}&APPID=${sifraAPI}`
       )
         .then((response) => {
           if (response.ok) {
@@ -78,6 +79,7 @@ function App() {
             <h6 className="errorText">{error}</h6>
             <MDBInput
               label="Npr London..."
+              id="inputGrada"
               value={imeGrada}
               onChange={(e) => setImeGrada(e.target.value)}
             />
