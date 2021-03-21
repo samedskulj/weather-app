@@ -1,3 +1,5 @@
+![](https://media.giphy.com/media/kF4qmvmYkIUW3DBPDM/giphy.gif)
+
 # Weather-App-React.js
 # Technologies used to make this:
 * :computer: Vanilla JS 
