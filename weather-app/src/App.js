@@ -15,6 +15,7 @@ import cloudy from "./slike/cloudy.png";
 import { MDBInput, MDBBtn, MDBIcon } from "mdbreact";
 import Poruka from "./components/Poruka";
 import sifraAPI from "./zastita/api_key";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   let mojBody = document.querySelector("#temperatura2");
@@ -58,23 +59,31 @@ function App() {
         <Row className="justify-content-between align-items-center moj-red">
           <Col className="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 moja-kolona align-self-center">
             {typeof vrijeme.main != "undefined" ? (
-              <div id="informacije">
-                <p id="temperatura2">
-                  {Math.floor(vrijeme.main.temp - 273.19)}°c
-                </p>
-                <p id="imegrada1" className="align-self-center ml-2 mt-2">
-                  {vrijeme.name}
-                </p>
-                <img
-                  src={cloudy}
-                  className="align-self-center mr-1 ml-2 mb-2"
-                  height="30px"
-                ></img>
-              </div>
+              <AnimatePresence>
+                <motion.div
+                  id="informacije"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <p id="temperatura2">
+                    {Math.floor(vrijeme.main.temp - 273.19)}°c
+                  </p>
+                  <p id="imegrada1" className="align-self-center ml-2 mt-2">
+                    {vrijeme.name}
+                  </p>
+                  <img
+                    src={cloudy}
+                    className="align-self-center mr-1 ml-2 mb-2"
+                    height="30px"
+                  ></img>
+                </motion.div>
+              </AnimatePresence>
             ) : (
               ""
             )}
           </Col>
+
           <Col className="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 moja-kolona1">
             <h6 className="errorText">{error}</h6>
             <MDBInput
@@ -95,6 +104,9 @@ function App() {
               Izaberite
             </MDBBtn>
           </Col>
+          <main>
+            <div></div>
+          </main>
         </Row>
       </Container>
     </>
