@@ -14,3 +14,6 @@ Just run `npm start` in the folder `weather-app`
 
 # Update v1
 Fixed the dependency security issues that GitHub told me
+
+# Update v2
+Fixed more dependencies issues that currently exist on the web application itself
